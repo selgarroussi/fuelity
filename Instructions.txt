@@ -1,0 +1,35 @@
+# Installation Instructions
+
+To ensure a seamless setup, follow these steps:
+
+1. Create and Activate a Virtual Environment (recommended):
+
+      python -m venv venv
+      source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+2. Install Dependencies:
+
+Use the requirements.txt file to install most dependencies:
+
+      pip install -r requirements.txt
+
+Install anemoi-datasets: 
+
+			pip install anemoi-datasets
+(for more info: https://anemoi-datasets.readthedocs.io/en/latest/installing.html)
+
+Update XGBoost and Scikit-learn (Optional): To ensure compatibility, update XGBoost and scikit-learn to the latest versions if necessary:
+
+      pip install --upgrade xgboost scikit-learn
+
+Cartopy Installation: You may require additional dependencies to compile cartopy. If this happens, you may need to install:
+
+      sudo apt-get install libproj-dev proj-data proj-bin libgeos-dev 
+
+on Linux systems or follow OS-specific instructions.
+
+3. Testing Installation: 
+
+After installation, you can verify that all packages are installed properly by running:
+
+      python -c "import pandas, numpy, xgboost, sklearn, matplotlib, cartopy, shapely, shap, anemoi-datasets"
